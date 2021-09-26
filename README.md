@@ -10,4 +10,4 @@ Así, cualquier usuario tendrá un acceso rápido, sencillo y directo a toda la 
 
 ## Documentación adicional
 
-Se puede encontrar documentación adicional sobre los tipos de usuario [aquí](https://github.com/Mapachana/Proyecto-IV/blob/Objetivo-1/doc/objetivo1.md)
+Se puede encontrar documentación adicional sobre los tipos de usuario [aquí](https://github.com/Mapachana/Proyecto-IV/blob/Objetivo-1/docs/objetivo1.md)
