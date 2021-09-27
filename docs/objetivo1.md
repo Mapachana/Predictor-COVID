@@ -12,7 +12,7 @@ Este proyecto está orientado principalmente a dos tipos de usuarios:
 
 | Milestone                                                    | Objetivo                                                     | Estado actual |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------- |
-| [Consulta de datos e interpretación](https://github.com/Mapachana/Proyecto-IV/milestone/1) | Funcionalidad mínima de la aplicación                        | No empezado   |
-| [Obtención de gráficas](https://github.com/Mapachana/Proyecto-IV/milestone/2) | Nueva funcionalidad para la obtención de gráficos, mejora de lo anterior | No empezado   |
-| [Nivel de restricciones y predicción](https://github.com/Mapachana/Proyecto-IV/milestone/3) | Funcionalidad nueva sobre las restricciones actuales y en un futuro próximo | No empezado   |
+| [Consulta de datos e interpretación](https://github.com/Mapachana/Proyecto-IV/milestone/1) | Primera versión de la aplicación en la que se puede consultar la última información disponible de la pandemia y una explicación del significado de los datos ofrecidos en lenguaje simple | No empezado   |
+| [Obtención de gráficas](https://github.com/Mapachana/Proyecto-IV/milestone/2) | Se añadirá a la aplicación ya existente la opción de obtener gráficas de los últimos datos | No empezado   |
+| [Nivel de restricciones y predicción](https://github.com/Mapachana/Proyecto-IV/milestone/3) | Se añadirá a la aplicación existente la opción de consultar a las restricciones actuales en una zona y una predicción sobre si se esperan cambios en las mismas | No empezado   |
 
