@@ -15,5 +15,5 @@ Así, cualquier usuario tendrá un acceso rápido, sencillo y directo a toda la 
 
 ## Objetivo 2
 En estos enlaces podrá ver los distintos issues creados como programador en el proyecto de Mapachana:
-HU-P1: [Elección de lenguaje de programación](https://github.com/Mapachana/Proyecto-IV/issues/6)
-HU-P2: [Organización de las clases](https://github.com/Mapachana/Proyecto-IV/issues/7)
+* HU-P1: [Elección de lenguaje de programación](https://github.com/Mapachana/Proyecto-IV/issues/6)
+* HU-P2: [Organización de las clases](https://github.com/Mapachana/Proyecto-IV/issues/7)
