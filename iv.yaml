@@ -1,4 +1,4 @@
-language: python 3.8
+lenguaje: python 3.8
 
 entidad: src/Datos.py
 entidad: src/Interpretacion.py
