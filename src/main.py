@@ -6,29 +6,27 @@ from Interpretacion import *
 from Graficas import *
 from Prediccion import *
 
-# PRUEBAS DE CODIGO 
+# PRUEBAS DE CODIGO
 
-lista_datos = list()
-datos_archidona_hoy = Datos(40,"Archidona","Malaga","Andalucia")
-datos_archidona_ayer = Datos(30,"Archidona","Malaga","Andalucia")
-datos_sevilla = Datos(100,"Sevilla","Sevilla","Andalucia")
-lista_datos.append(datos_archidona_hoy)
-lista_datos.append(datos_sevilla)
+ListaDatos = list()
+DatosArchidonaHoy = Datos(40,"Archidona","Malaga","Andalucia")
+DatosArchidonaAyer = Datos(30,"Archidona","Malaga","Andalucia")
+DatosSevilla = Datos(100,"Sevilla","Sevilla","Andalucia")
+ListaDatos.append(DatosArchidonaHoy)
+ListaDatos.append(DatosSevilla)
 
-lista_datos_archidona = list()
-lista_datos_archidona.append(datos_archidona_hoy)
-lista_datos_archidona.append(datos_archidona_ayer)
+ListaDatosArchidona = list()
+ListaDatosArchidona.append(DatosArchidonaHoy)
+ListaDatosArchidona.append(DatosArchidonaAyer)
 
-interpretacion = Interpretacion(lista_datos)
-grafica = Graficas(lista_datos_archidona)
+Interpretacion = Interpretacion(ListaDatos)
+Grafica = Graficas(ListaDatosArchidona)
 
-prediccion = Prediccion(lista_datos_archidona)
+Prediccion = Prediccion(ListaDatosArchidona)
 
-print(interpretacion.contenedorDatos[0].numCasos)
-print(lista_datos_archidona[1].numCasos)
-print(grafica.contenedorDatos[0].numCasos)
-print(len(grafica.contenedorDatos))
-print(grafica.numCasos[0])
-print(prediccion.historialDatos[1].numCasos)
-
-
+print(Interpretacion.ContenedorDatos[0].NumCasos)
+print(ListaDatosArchidona[1].NumCasos)
+print(Grafica.ContenedorDatos[0].NumCasos)
+print(len(Grafica.ContenedorDatos))
+print(Grafica.NumCasos[0])
+print(Prediccion.HistorialDatos[1].NumCasos)
