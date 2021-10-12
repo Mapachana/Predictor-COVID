@@ -1,5 +1,2 @@
-lenguaje: python 3.8
+lenguaje: python
 entidad: src/Datos.py
-entidad: src/Interpretacion.py
-entidad: src/Graficas.py
-entidad: src/Prediccion.py
