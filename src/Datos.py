@@ -9,6 +9,6 @@ class Datos:
         self.com_autonoma = com_auto
         self.fecha = datetime.today()
 
-    # Metodo para descargar los datos en un fichero de texto
     def exportar_datos_a_fichero(self):
+        ''' Metodo para descargar los datos en un fichero de texto '''
         pass
