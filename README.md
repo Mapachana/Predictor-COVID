@@ -1,7 +1,6 @@
 # Proyecto de IV
 
 > Por Mapachana 
-(Fork de Pablont98)
 
 ## ¿Qué es?
 
