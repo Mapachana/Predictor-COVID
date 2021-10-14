@@ -8,9 +8,9 @@ Durante la pandemia es difícil encontrar toda la información necesaria sobre e
 
 Así, cualquier usuario tendrá un acceso rápido, sencillo y directo a toda la información actualizada y ayuda para su interpretación desde el móvil.
 
-> ## Documentación adicional
+ ## Documentación adicional
 
-> Se puede encontrar documentación adicional sobre los tipos de usuario [aquí](https://github.com/Mapachana/Proyecto-IV/blob/Objetivo-1/docs/objetivo1.md)
+ Se puede encontrar documentación adicional sobre los tipos de usuario [aquí](https://github.com/Mapachana/Proyecto-IV/blob/Objetivo-1/docs/objetivo1.md)
 
 ## Objetivo 2
 En estos enlaces podrá ver los distintos issues creados como programador en el proyecto de Mapachana:
