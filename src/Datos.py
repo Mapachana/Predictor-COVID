@@ -8,7 +8,3 @@ class Datos:
         self.provincia = prov
         self.com_autonoma = com_auto
         self.fecha = datetime.today()
-
-    def exportar_datos_a_fichero(self):
-        ''' Metodo para descargar los datos en un fichero de texto '''
-        pass
