@@ -1,1 +1,1 @@
-datetime
+datetime==4.3.0
