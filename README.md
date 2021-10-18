@@ -20,7 +20,7 @@ Primero, instalamos las dependencias ejecutando el siguiente comando:
 invoke installdeps
 ```
 
-Si queremos trabajar con el repositorio como desarrolladores debemos añadir el flasg `--dev` para instalar las dependencias de desarrollador también.
+Si queremos trabajar con el repositorio como desarrolladores debemos añadir el flag `--dev` para instalar las dependencias de desarrollador también.
 
 Una vez hecho esto, lanzamos los tests para comprobar que todo funciona correctamente ejecutando:
 
