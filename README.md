@@ -38,8 +38,6 @@ invoke check
 
 - Se puede encontrar documentación adicional sobre los tipos de usuario [aquí](https://github.com/Mapachana/Proyecto-IV/blob/Objetivo-1/docs/objetivo1.md)
 - La justificación sobre la elección de invoke para el Objetivo 3 puede encontrarse [aquí](https://github.com/Mapachana/Proyecto-IV/blob/Objetivo-3/docs/objetivo3.md)
-
-## Objetivo 2
-En estos enlaces podrá ver los distintos issues creados como programador en el proyecto de Mapachana:
-* HU-P1: [Elección de lenguaje de programación](https://github.com/Mapachana/Proyecto-IV/issues/6)
-* HU-P2: [Organización de las clases](https://github.com/Mapachana/Proyecto-IV/issues/7)
+- En estos enlaces podrá ver los distintos issues creados como programador en el proyecto de Mapachana:
+    - HU-P1: [Elección de lenguaje de programación](https://github.com/Mapachana/Proyecto-IV/issues/6)
+    - HU-P2: [Organización de las clases](https://github.com/Mapachana/Proyecto-IV/issues/7)
