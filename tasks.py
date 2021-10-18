@@ -26,7 +26,6 @@ def test(c):
 @task
 def check(c):
 	"""
-	Tarea que comprueba si la sintaxis de todos los ficheros del proyecto
+	Tarea que comprueba si la sintaxis de todos los ficheros del proyecto es correcta
 	"""
-
 	run("pylint prediccion")
