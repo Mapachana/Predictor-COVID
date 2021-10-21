@@ -14,6 +14,14 @@ Para ejecutar este proyecto, comienza por descargar los archivos fuente del repo
 
 Una vez clonado o descargado, nos situamos en la carpeta raíz del repositorio y abrimos una terminal.
 
+Ahora, instalamos Invoke abriendo una terminal y usando:
+
+```shell
+pip install invoke
+```
+
+Para más información sobre cómo instalar invoke se puede consultar la [documentación oficial](https://www.pyinvoke.org/installing.html).
+
 Primero, instalamos las dependencias ejecutando el siguiente comando:
 
 ```shell
