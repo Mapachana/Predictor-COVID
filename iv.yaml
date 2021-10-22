@@ -1,2 +1,5 @@
 lenguaje: python
 entidad: prediccion/Datos.py
+automatizar:
+    fichero: tasks.py
+    orden: invoke
