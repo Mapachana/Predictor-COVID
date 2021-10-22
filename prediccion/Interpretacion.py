@@ -12,6 +12,12 @@ class Interpretacion:
         '''
         self.contenedor_datos = list(datos)
  
+    def leer_datos(fichero):
+        '''
+        Metodo para leer y almacenar los datos de un fichero para trabajar con ellos
+        '''
+        pass
+
     def generar_interpretacion(self,com_auto,fecha):
         ''' Metodo para crear una interpretacion a partir del contenedor de datos 
         se puede filtrar dicha interpretacion por comunidad autonoma y
