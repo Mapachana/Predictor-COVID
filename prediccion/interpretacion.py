@@ -1,4 +1,4 @@
-import Datos as dt
+import datos as dt
 
 class Interpretacion:
     '''
