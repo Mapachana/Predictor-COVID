@@ -47,24 +47,27 @@ class Interpretacion:
         se puede filtrar dicha interpretacion por comunidad autonoma y
         fecha. Si no se desea contar con alguno de esos atributos, 
         se marca como cadena vacia "" '''
-        indice = 0
+        indice = -1
         for i in range(0,len(self.contenedor_datos)):
             if self.contenedor_datos[i].com_autonoma == com_auto and self.contenedor_datos[i].fecha == fecha:
                 indice = i
                 break
         
-        num_dias = 14
-        total_casos = 0
+        if indice >= 0:
+            num_dias = 14
+            total_casos = 0
 
-        indice_inicio = max(indice-num_dias, 0)
+            indice_inicio = max(indice-num_dias, 0)
 
-        for i in range(indice_inicio, indice):
-            total_casos = total_casos + self.contenedor_datos[i].num_casos
+            for i in range(indice_inicio, indice):
+                total_casos = total_casos + self.contenedor_datos[i].num_casos
 
-        if total_casos < 500:
-            print("Vamos bien")
+            if total_casos < 500:
+                print("Vamos bien")
+            else:
+                print("No vamos bien")
         else:
-            print("No vamos bien")
+            print("No se ha encontrado la comunidad autonoma o fecha indicadas")
                       
 
 
