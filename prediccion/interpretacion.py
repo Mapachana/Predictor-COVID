@@ -30,16 +30,6 @@ class Interpretacion:
             casos = int(aux[3])+int(aux[4])+int(aux[5])+int(aux[6])+int(aux[7])+int(aux[7])
 
             self.contenedor_datos.append(dt.Datos(fecha, ccaa, casos))
-        '''print(self.contenedor_datos)
-        print(self.contenedor_datos[0].fecha)
-        print(self.contenedor_datos[0].com_autonoma)
-        print(self.contenedor_datos[0].num_casos)
-
-        print(len(self.contenedor_datos))
-        print(self.contenedor_datos[6203].fecha)
-        print(self.contenedor_datos[6203].com_autonoma)
-        print(self.contenedor_datos[6203].num_casos)'''
-
         
 
     def generar_interpretacion(self,com_auto,fecha):
@@ -69,11 +59,3 @@ class Interpretacion:
         else:
             print("No se ha encontrado la comunidad autonoma o fecha indicadas")
                       
-
-
-'''interp = Interpretacion([])
-interp.leer_datos("ccaa_de_declaracion_covid19_datos_isciii_nueva_seriea.csv")
-interp.leer_datos("./noexisto.csv")
-interp.generar_interpretacion("Andalucía", "2020-03-10")
-interp.generar_interpretacion("Andalucía", "2021-01-10")
-interp.generar_interpretacion("Andalucía", "2020-01-10")'''
