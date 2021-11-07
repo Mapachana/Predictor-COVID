@@ -30,7 +30,7 @@ class Interpretacion:
             casos = int(aux[3])+int(aux[4])+int(aux[5])+int(aux[6])+int(aux[7])+int(aux[7])
 
             self.contenedor_datos.append(dt.Datos(fecha, ccaa, casos))
-        print(self.contenedor_datos)
+        '''print(self.contenedor_datos)
         print(self.contenedor_datos[0].fecha)
         print(self.contenedor_datos[0].com_autonoma)
         print(self.contenedor_datos[0].num_casos)
@@ -38,7 +38,7 @@ class Interpretacion:
         print(len(self.contenedor_datos))
         print(self.contenedor_datos[6203].fecha)
         print(self.contenedor_datos[6203].com_autonoma)
-        print(self.contenedor_datos[6203].num_casos)
+        print(self.contenedor_datos[6203].num_casos)'''
 
         
 
