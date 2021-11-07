@@ -54,3 +54,14 @@ def test_interpretacion_correcta(interp):
     # Dejo la salida como estaba
     sys.stdout = sys.__stdout__
     
+def test_interpretacion_ccaa_no_existe(interp):
+     # Redirijo la salida
+    captured_output = io.StringIO()
+    sys.stdout = captured_output
+
+    interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
+    interpretacion_generada = captured_output.getvalue()
+    assert interpretacion_generada == "No se ha encontrado la comunidad autonoma o fecha indicadas\n"
+
+    # Dejo la salida como estaba
+    sys.stdout = sys.__stdout__
