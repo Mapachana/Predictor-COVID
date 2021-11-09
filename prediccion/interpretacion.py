@@ -5,14 +5,15 @@ class Interpretacion:
     Clase para obtener información de un conjunto de Datos
     '''
 
-    def __init__(self, datos):
+    def __init__(self, fichero):
         '''
         Constructor de la clase Interpretacion, que trabaja con los datos para dar una explicacion sencilla de la situacion actual.
 
         Argumentos:
             - datos: Lista de datos sobre los que se trabaja 
         '''
-        self.contenedor_datos = list(datos)
+        self.contenedor_datos = list()
+        self.leer_datos(fichero)
  
     def leer_datos(self,fichero_leer):
         '''

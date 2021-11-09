@@ -16,8 +16,7 @@ def interp():
     ''''
     Funcion fixture que crea el objeto interpretacion a usar para los tests
     '''
-    interp = Interpretacion([])
-    interp.leer_datos("./tests/datos_prueba.csv")
+    interp = Interpretacion("./tests/datos_prueba.csv")
 
     return interp
 
@@ -31,10 +30,10 @@ def test_excepcion():
     ''''
     Funcion test para comprobar si se lanza una excepcion de fichero no encontrado al pasar un archivo inexistente
     '''
-    interp = Interpretacion([])
     aux = unittest.TestCase()
     with aux.assertRaises(FileNotFoundError):
-        interp.leer_datos("./noexisto.csv")
+        #interp.leer_datos("./noexisto.csv")
+        interp = Interpretacion("./noexisto.csv")
 
 def test_datos_correctos(interp):
     '''
