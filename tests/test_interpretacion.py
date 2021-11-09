@@ -31,8 +31,7 @@ def test_excepcion():
     Funcion test para comprobar si se lanza una excepcion de fichero no encontrado al pasar un archivo inexistente
     '''
     aux = unittest.TestCase()
-    with aux.assertRaises(FileNotFoundError):
-        #interp.leer_datos("./noexisto.csv")
+    with aux.assertRaises(SystemExit):
         interp = Interpretacion("./noexisto.csv")
 
 def test_datos_correctos(interp):
