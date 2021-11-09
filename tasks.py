@@ -22,7 +22,7 @@ def test(c):
 	Tarea que lanza los tests para comprobar el correcto funcionamiento del programa
 	"""
 	print("Lanzando comprobaciones... ")
-	run("pytest tests/")
+	run("pytest")
 
 @task
 def check(c):
