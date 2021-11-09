@@ -14,7 +14,7 @@ class Interpretacion:
         Constructor de la clase Interpretacion, que trabaja con los datos para dar una explicacion sencilla de la situacion actual.
 
         Argumentos:
-            - datos: Lista de datos sobre los que se trabaja 
+            - fichero: fichero desde el que se van a leer los datos
         '''
         self.contenedor_datos = list()
         self.num_dias = 14
@@ -42,10 +42,12 @@ class Interpretacion:
             sys.exit("El archivo no existe")
 
     def generar_interpretacion(self,com_auto,fecha):
-        ''' Metodo para crear una interpretacion a partir del contenedor de datos 
-        se puede filtrar dicha interpretacion por comunidad autonoma y
-        fecha. Si no se desea contar con alguno de esos atributos, 
-        se marca como cadena vacia "" '''
+        '''
+        Metodo para crear una interpretacion a partir del contenedor de datos filtrandola
+        por comunidad autonoma y fecha. 
+        
+        Devuelve: Un string con la interpretación o error si no se ha podido generar.
+        '''
 
         indice = -1
         for i in range(0,len(self.contenedor_datos)):

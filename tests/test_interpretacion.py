@@ -48,37 +48,18 @@ def test_interpretacion_correcta(interp):
     Funcion test para comprobar si las interpretaciones son correctar
     '''
 
-    # Redirijo la salida
-    captured_output = io.StringIO()
-    sys.stdout = captured_output
+    interpretacion_generada = interp.generar_interpretacion('Andalucía', '2021-01-10')
+    assert interpretacion_generada == "No vamos bien"
 
-    interp.generar_interpretacion('Andalucía', '2021-01-10')
-    interpretacion_generada = captured_output.getvalue()
-    assert interpretacion_generada == "No vamos bien\n"
+    interpretacion_generada = interp.generar_interpretacion("Andalucía", "2020-03-10")
+    assert interpretacion_generada == "Vamos bien"
 
-    # Vaciar la salida anterior
-    captured_output.truncate(0)
-    captured_output.seek(0)
 
-    interp.generar_interpretacion("Andalucía", "2020-03-10")
-    interpretacion_generada = captured_output.getvalue()
-    assert interpretacion_generada == "Vamos bien\n"
-
-    # Dejo la salida como estaba
-    sys.stdout = sys.__stdout__
-    
 def test_interpretacion_ccaa_no_existe(interp):
     ''''
     Funcion test para asegurarse de que no realiza predicciones si los datos pedidos no son correctos
     '''
 
-     # Redirijo la salida
-    captured_output = io.StringIO()
-    sys.stdout = captured_output
+    interpretacion_generada = interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
+    assert interpretacion_generada == "No se ha encontrado la comunidad autonoma o fecha indicadas"
 
-    interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
-    interpretacion_generada = captured_output.getvalue()
-    assert interpretacion_generada == "No se ha encontrado la comunidad autonoma o fecha indicadas\n"
-
-    # Dejo la salida como estaba
-    sys.stdout = sys.__stdout__
