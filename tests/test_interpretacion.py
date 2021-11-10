@@ -11,39 +11,23 @@ from prediccion.interpretacion import ErrorEncontrandoFichero, Interpretacion
 class TestInterpretacion(unittest.TestCase):
     
     def setUp(self):
-        ''''
-        Metodo que crea el objeto interpretacion a usar para los tests
-        '''
         self.interp = Interpretacion("./tests/datos_prueba.csv")
 
 
     def test_tiene_datos(self):
-        '''
-        Metodo test para comprobar si el contenedor de datos no esta vacio
-        '''
         assert self.interp.contenedor_datos != []
 
-    def test_excepcion(self):
-        ''''
-        Metodo test para comprobar si se lanza una excepcion de fichero no encontrado al pasar un archivo inexistente
-        '''
+    def test_excepcion_fichero_no_encontrado(self):
         with self.assertRaises(ErrorEncontrandoFichero):
             interp = Interpretacion("./noexisto.csv")
 
     def test_datos_correctos(self):
-        '''
-        Metodo test para comprobar si los datos se han leido correctamente y tienen sentido
-        '''
         for elem in self.interp.contenedor_datos:
             assert elem.fecha != ''
             assert elem.com_autonoma != ''
             assert elem.num_casos >= 0
 
     def test_interpretacion_correcta(self):
-        '''
-        Metodo test para comprobar si las interpretaciones son correctar
-        '''
-
         interpretacion_generada = self.interp.generar_interpretacion('Andalucía', '2021-01-10')
         assert interpretacion_generada == "No vamos bien"
 
@@ -52,9 +36,5 @@ class TestInterpretacion(unittest.TestCase):
 
 
     def test_interpretacion_ccaa_no_existe(self):
-        ''''
-        Metodo test para asegurarse de que no realiza predicciones si los datos pedidos no son correctos
-        '''
-
         interpretacion_generada = self.interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
         assert interpretacion_generada == "No se ha encontrado la comunidad autonoma o fecha indicadas"
