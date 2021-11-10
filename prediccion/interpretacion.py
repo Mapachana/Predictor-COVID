@@ -1,7 +1,12 @@
-import datos as dt
+
 import sys
 from functools import reduce
 
+# Configuro paths
+sys.path.append('./')
+sys.path.append('./prediccion/')
+
+import datos as dt
 
 class Interpretacion:
     '''

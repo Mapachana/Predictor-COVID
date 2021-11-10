@@ -11,10 +11,10 @@ def installdeps(c, dev=False):
 	"""
 	if(dev):
 		print("Instalando dependencias de dev:")
-		run("pip3 install -r requirements-dev.txt")
+		run("poetry install")
 
 	print("Instalando dependencias:")
-	run("pip3 install -r requirements.txt")
+	run("poetry install --no-dev")
 
 @task
 def test(c):

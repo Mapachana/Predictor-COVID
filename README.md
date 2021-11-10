@@ -22,6 +22,8 @@ pip install invoke
 
 Para más información sobre cómo instalar invoke se puede consultar la [documentación oficial](https://www.pyinvoke.org/installing.html).
 
+También es necesario instalar poetry, para ello puede consultarse [este enlace](https://python-poetry.org/docs/).
+
 Primero, instalamos las dependencias ejecutando el siguiente comando:
 
 ```shell
