@@ -21,8 +21,6 @@ class TestInterpretacion(unittest.TestCase):
         '''
         Metodo test para comprobar si el contenedor de datos esta vacio
         '''
-        #self.interp = Interpretacion("./tests/datos_prueba.csv")
-
         assert self.interp.contenedor_datos != []
 
     def test_excepcion(self):
