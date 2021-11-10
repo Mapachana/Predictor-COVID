@@ -8,6 +8,11 @@ sys.path.append('./prediccion/')
 
 import datos as dt
 
+
+class ErrorEncontrandoFichero(Exception):
+    pass
+
+
 class Interpretacion:
     '''
     Clase para obtener información de un conjunto de Datos
@@ -46,7 +51,7 @@ class Interpretacion:
                 self.contenedor_datos.append(dt.Datos(fecha, ccaa, casos))
 
         except:
-            sys.exit("El archivo no existe")
+            raise ErrorEncontrandoFichero("No se ha encontrado el fichero")
 
     def generar_interpretacion(self,com_auto,fecha):
         '''

@@ -6,7 +6,7 @@ sys.path.append('./')
 sys.path.append('./prediccion/')
 
 
-from prediccion.interpretacion import Interpretacion
+from prediccion.interpretacion import ErrorEncontrandoFichero, Interpretacion
 
 class TestInterpretacion(unittest.TestCase):
     
@@ -27,7 +27,7 @@ class TestInterpretacion(unittest.TestCase):
         ''''
         Metodo test para comprobar si se lanza una excepcion de fichero no encontrado al pasar un archivo inexistente
         '''
-        with self.assertRaises(SystemExit):
+        with self.assertRaises(ErrorEncontrandoFichero):
             interp = Interpretacion("./noexisto.csv")
 
     def test_datos_correctos(self):
