@@ -19,7 +19,7 @@ class TestInterpretacion(unittest.TestCase):
 
     def test_tiene_datos(self):
         '''
-        Metodo test para comprobar si el contenedor de datos esta vacio
+        Metodo test para comprobar si el contenedor de datos no esta vacio
         '''
         assert self.interp.contenedor_datos != []
 
