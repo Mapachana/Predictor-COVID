@@ -1,8 +1,6 @@
 import datos as dt
 import sys
 
-class MiError(Exception):
-    pass
 
 class Interpretacion:
     '''
@@ -20,7 +18,7 @@ class Interpretacion:
         self.num_dias = 14
         self.leer_datos(fichero)
  
-    def leer_datos(self,fichero_leer):
+    def leer_datos(self, fichero_leer):
         '''
         Metodo para leer y almacenar los datos de un fichero para trabajar con ellos
         '''
