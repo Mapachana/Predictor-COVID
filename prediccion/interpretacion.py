@@ -1,5 +1,6 @@
 import datos as dt
 import sys
+from functools import reduce
 
 
 class Interpretacion:
@@ -32,7 +33,10 @@ class Interpretacion:
                 aux = linea.split(",")
                 fecha = aux[0]
                 ccaa = aux[2]
-                casos = int(aux[3])+int(aux[4])+int(aux[5])+int(aux[6])+int(aux[7])+int(aux[7])
+
+                lista_casos = aux[3:]
+                lista_casos = map(int, lista_casos)
+                casos = reduce(lambda x, y:x+y, lista_casos)
 
                 self.contenedor_datos.append(dt.Datos(fecha, ccaa, casos))
 
