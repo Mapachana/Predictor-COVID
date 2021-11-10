@@ -2,7 +2,7 @@
 name = "predictor-covid"
 version = "0.1.0"
 description = "Proyecto para interpretar y generar graficas sobre los ultimos datos del covid, tambien podra generar pequeñas predicciones"
-authors = ["Mapachana <anabuenrua99@gmail.com>"]
+authors = ["Mapachana"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
