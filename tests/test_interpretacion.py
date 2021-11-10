@@ -12,14 +12,14 @@ class TestInterpretacion(unittest.TestCase):
     
     def setUp(self):
         ''''
-        Funcion fixture que crea el objeto interpretacion a usar para los tests
+        Metodo que crea el objeto interpretacion a usar para los tests
         '''
         self.interp = Interpretacion("./tests/datos_prueba.csv")
 
 
     def test_tiene_datos(self):
         '''
-        Funcion test para comprobar si el contenedor de datos esta vacio
+        Metodo test para comprobar si el contenedor de datos esta vacio
         '''
         #self.interp = Interpretacion("./tests/datos_prueba.csv")
 
@@ -27,14 +27,14 @@ class TestInterpretacion(unittest.TestCase):
 
     def test_excepcion(self):
         ''''
-        Funcion test para comprobar si se lanza una excepcion de fichero no encontrado al pasar un archivo inexistente
+        Metodo test para comprobar si se lanza una excepcion de fichero no encontrado al pasar un archivo inexistente
         '''
         with self.assertRaises(SystemExit):
             interp = Interpretacion("./noexisto.csv")
 
     def test_datos_correctos(self):
         '''
-        Funcion test para comprobar si los datos se han leido correctamente y tienen sentido
+        Metodo test para comprobar si los datos se han leido correctamente y tienen sentido
         '''
         for elem in self.interp.contenedor_datos:
             assert elem.fecha != ''
@@ -43,7 +43,7 @@ class TestInterpretacion(unittest.TestCase):
 
     def test_interpretacion_correcta(self):
         '''
-        Funcion test para comprobar si las interpretaciones son correctar
+        Metodo test para comprobar si las interpretaciones son correctar
         '''
 
         interpretacion_generada = self.interp.generar_interpretacion('Andalucía', '2021-01-10')
@@ -55,7 +55,7 @@ class TestInterpretacion(unittest.TestCase):
 
     def test_interpretacion_ccaa_no_existe(self):
         ''''
-        Funcion test para asegurarse de que no realiza predicciones si los datos pedidos no son correctos
+        Metodo test para asegurarse de que no realiza predicciones si los datos pedidos no son correctos
         '''
 
         interpretacion_generada = self.interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
