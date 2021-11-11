@@ -6,7 +6,7 @@ sys.path.append('./')
 sys.path.append('./prediccion/')
 
 
-from prediccion.interpretacion import ErrorEncontrandoFichero, Interpretacion
+from prediccion.interpretacion import ErrorEncontrandoFichero, EstadoSituacion, Interpretacion
 
 class TestInterpretacion(unittest.TestCase):
     
@@ -29,12 +29,11 @@ class TestInterpretacion(unittest.TestCase):
 
     def test_interpretacion_correcta(self):
         interpretacion_generada = self.interp.generar_interpretacion('Andalucía', '2021-01-10')
-        assert interpretacion_generada == "No vamos bien"
+        assert interpretacion_generada == EstadoSituacion.MALA
 
         interpretacion_generada = self.interp.generar_interpretacion("Andalucía", "2020-03-10")
-        assert interpretacion_generada == "Vamos bien"
-
+        assert interpretacion_generada == EstadoSituacion.BUENA
 
     def test_interpretacion_ccaa_no_existe(self):
         interpretacion_generada = self.interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
-        assert interpretacion_generada == "No se ha encontrado la comunidad autonoma o fecha indicadas"
+        assert interpretacion_generada == EstadoSituacion.DESCONOCIDA

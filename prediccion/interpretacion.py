@@ -1,6 +1,7 @@
 
 import sys
 from functools import reduce
+from enum import Enum
 
 # Configuro paths
 sys.path.append('./')
@@ -11,6 +12,12 @@ import datos as dt
 
 class ErrorEncontrandoFichero(Exception):
     pass
+
+
+class EstadoSituacion(Enum):
+    BUENA = "Vamos bien"
+    MALA = "No vamos bien"
+    DESCONOCIDA = "No se ha encontrado la comunidad autonoma o fecha indicadas"
 
 
 class Interpretacion:
@@ -76,9 +83,9 @@ class Interpretacion:
             total_casos = reduce(lambda x,y:x+y, (x.num_casos for x in self.contenedor_datos[indice_inicio:indice]))
 
             if total_casos < 500:
-                return "Vamos bien"
+                return EstadoSituacion.BUENA
             else:
-                return "No vamos bien"
+                return EstadoSituacion.MALA
         else:
-            return "No se ha encontrado la comunidad autonoma o fecha indicadas"
+            return EstadoSituacion.DESCONOCIDA
                       
