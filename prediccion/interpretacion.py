@@ -72,8 +72,8 @@ class Interpretacion:
 
             indice_inicio = max(indice-self.num_dias, 0)
 
-            for i in range(indice_inicio, indice):
-                total_casos = total_casos + self.contenedor_datos[i].num_casos
+            # Sumo todos los casos desde el dia de indice_inicio hasta indice (fecha indicada)
+            total_casos = reduce(lambda x,y:x+y, (x.num_casos for x in self.contenedor_datos[indice_inicio:indice]))
 
             if total_casos < 500:
                 return "Vamos bien"
