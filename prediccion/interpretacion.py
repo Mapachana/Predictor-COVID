@@ -33,7 +33,7 @@ class Interpretacion:
             - fichero: fichero desde el que se van a leer los datos
         '''
         self.contenedor_datos = list()
-        self.num_dias = 14
+        self.NUM_DIAS = 14
         self.leer_datos(fichero)
  
     def leer_datos(self, fichero_leer):
@@ -77,7 +77,7 @@ class Interpretacion:
         if indice >= 0:
             total_casos = 0
 
-            indice_inicio = max(indice-self.num_dias, 0)
+            indice_inicio = max(indice-self.NUM_DIAS, 0)
 
             # Sumo todos los casos desde el dia de indice_inicio hasta indice (fecha indicada)
             total_casos = reduce(lambda x,y:x+y, (x.num_casos for x in self.contenedor_datos[indice_inicio:indice]))
