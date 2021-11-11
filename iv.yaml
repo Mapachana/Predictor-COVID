@@ -3,3 +3,4 @@ entidad: prediccion/Datos.py
 automatizar:
     fichero: tasks.py
     orden: invoke
+test: tests/test_interpretacion.py
