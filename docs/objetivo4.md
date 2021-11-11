@@ -2,9 +2,7 @@
 
 ## Elección de la biblioteca de aserción y test runner
 
-Se ha elegido usar `assert` como biblioteca de aserción ya que es una funcionalidad incorporada en python, por lo que no es necesario instalar ninguna depedencia externa, y por su simplicidad.
+Se ha elegido usar `unittest` como biblioteca de aserción ya que, a pesar de ser más compleja y necesitar heredar de la clase `unittest.TestCase`, tiene funcionalidad para comprobar cuándo se lanza una excepción concreta al ejecutar diversos métodos y funciones, lo que he considerado especialmente útil. También va a usarse `assert` por su simplicidad.
 
-Respecto al testrunner, se consideraron como opciones `pytest` y `unittest`.
-
-`Pytest` es mucho más sencillo y fácil de usar, pero finalmente se ha usado `unittest`, ya que pese a que necesita declarar una clase hija de `unittest.TestCase` ofrece una forma sencilla de comprobar si se lanzan excepciones concretas al ejecutar funciones o métodos. Esta funcionalidad la he considerado especialmente útil, lo que me ha hecho decantarme por usar `unittest`.
+Respecto al testrunner, se ha usado `pytest` ya que es muy sencilla y su uso está muy extendido para ejecutar tests en python.
 
