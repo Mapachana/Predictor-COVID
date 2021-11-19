@@ -14,9 +14,9 @@ def installdeps(c, dev=False):
 		print("Instalando dependencias de dev:")
 		
 		run("poetry install", shell="/bin/sh")
-
-	print("Instalando dependencias:")
-	run("poetry install --no-dev", shell="/bin/sh")
+	else:
+		print("Instalando dependencias:")
+		run("poetry install --no-dev", shell="/bin/sh")
 
 @task
 def test(c):

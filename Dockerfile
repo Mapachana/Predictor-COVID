@@ -18,7 +18,7 @@ ENV PATH=$PATH:/home/test/.poetry/bin
 
 #USER root
 #RUN poetry export -f requirements.txt --output requirements.txt && pip install --no-cache-dir -r requirements.txt
-RUN  poetry config virtualenvs.create false; poetry install
+RUN  poetry config virtualenvs.create false; invoke installdeps --dev
 
 #USER test
 #RUN pytest --version
