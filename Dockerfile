@@ -2,6 +2,8 @@
 
 FROM python:3.8-alpine
 
+LABEL maintainer="mapachana"
+
 WORKDIR /app
 COPY ./poetry.lock ./pyproject.toml ./tasks.py /app/
 
