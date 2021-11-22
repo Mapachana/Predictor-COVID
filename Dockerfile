@@ -13,9 +13,7 @@ WORKDIR /app/test
 
 RUN pip3 install invoke; curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
-USER root
-RUN apk del curl
-USER test
+
 
 ENV PATH=$PATH:/home/test/.local/bin
 ENV PATH=$PATH:/home/test/.poetry/bin
