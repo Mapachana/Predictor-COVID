@@ -2,9 +2,11 @@
 
 ## Elección del contenedor base
 
-El proyecto está programado en python, por lo que como contenedor base se ha usado el contenedor oficial de Python en su versión 3.8, ya que es la misma versión en la que se ha desarrollado el proyecto en primer lugar y es estable.
+El proyecto está programado en python, por lo que como contenedor base se ha usado el contenedor oficial de Python en su versión 3.8, ya que es una versión de python bastante extendida y estable.
 
-Además al usar alpine el contenedor es más ligero.
+Además al elegir qué variante del contenedor oficial se va a usar (las variantes pueden consultarse [aquí](https://hub.docker.com/_/python)), ya que no necesitamos demasiadas funcionalidades propias de un sistema operativo y buscamos hacer el contenedor lo más ligero posible me he decantado por alpine. 
+
+Otra ventaja de usar este contenedor como base es que al ser oficial, el contenedor tiene una documentación clara y mucha información sobre dudas frecuentes en la comunidad, así como sus soluciones. Asimismo se garantiza que el contenedor tenga soporte y actualizaciones para garantizar la seguridad de la imagen.
 
 ## Tamaño del contenedor
 
