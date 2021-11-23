@@ -32,3 +32,11 @@ def check(c):
 	Tarea que comprueba si la sintaxis de todos los ficheros del proyecto es correcta
 	"""
 	run("pylint --errors-only prediccion", shell="/bin/sh")
+
+
+@task
+def docker(c):
+	"""
+	Tarea que construye y ejecuta el docker que lanza los tests
+	"""
+	run("docker build --tag mapachana/predictor-covid . && docker run -t -v `pwd`:/app/test mapachana/predictor-covid", shell="/bin/sh")

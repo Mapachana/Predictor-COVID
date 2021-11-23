@@ -44,10 +44,10 @@ También podemos comprobar la correcta sintaxis de todos los ficheros del módul
 invoke check
 ```
 
-Si no quisiéramos instalar las dependencias en nuestro ordenador personal, se puede usar un contenedor docker que puede construirse usando la orden:
+Si no quisiéramos instalar las dependencias en nuestro ordenador personal, se puede usar un contenedor docker que puede construirse y lanzarse usando la orden:
 
 ```shell
-docker build --tag mapachana/predictor-covid .
+invoke docker
 ```
 
 O puede encontrarse el contenedor [aquí](https://hub.docker.com/u/mapachana)
