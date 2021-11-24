@@ -12,6 +12,4 @@ Otra ventaja de usar este contenedor como base es que al ser oficial, el contene
 
 Se han probado diversas configuraciones en el docker, ya sea poniendo en un `run` aparte el comando para crear el grupo de usuario, dejando curl instalado sin borrarlo pese a no ser necesario o borrándolo tras dejar de ser útil. En todas estas configuraciones el contenedor ha ocupado 219MB, por lo que finalmente se ha optado por desinstalar curl al terminar de usarlo.
 
-## ¿Por qué instalar curl?
-
-Se ha instalado curl ya que es necesario para instalar poetry, y tras instalarlo se ha desinstalado curl.
+Si en lugar de usar curl se usa pip para instalar poetry entonces es necesario instalar gcc y la librería libffi-dev, por lo que el tamaño del contenedor es 305MB.
