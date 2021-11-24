@@ -5,11 +5,8 @@
 
 name: Publish Docker image
 
-on:
-  push:
-    branches:
-      - main
-      - Objetivo-5
+on: push
+
 
 jobs:
   push_to_registry:
