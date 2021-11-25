@@ -11,11 +11,7 @@ RUN apk update; apk add curl; ln -s /usr/bin/python /usr/bin/python3.8; addgroup
 USER test
 WORKDIR /app/test
 
-RUN pip3 install invoke; curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-
-USER root
-RUN apk del curl
-USER test
+RUN pip3 install invoke; wget -q -O - "$@" https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 ENV PATH=$PATH:/home/test/.local/bin
 ENV PATH=$PATH:/home/test/.poetry/bin
