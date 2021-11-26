@@ -16,7 +16,7 @@ Se va a usar la versión `latest` de alpine para asegurar que la versión sea la
 
 ## ¿Cómo instalar poetry?
 
-Para instalar poetry podemos usar curl o pip según la documentación oficial. Si usamos curl, solo es necesario instalar curl, mientras que si usamos pip es necesario tener la libreria libffi-dev y gcc instalado.
+Para instalar poetry podemos usar curl, wget o pip. Si usamos curl, solo es necesario instalar curl, mientras que si usamos pip es necesario tener la libreria libffi-dev y gcc instalado.
 
 En lugar de usar curl finalmente se ha usado wget, que viene instalado por defecto. De esta forma se minimizan las dependencias a mantener. ¿Pero y el tamaño?
 
