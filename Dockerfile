@@ -13,8 +13,7 @@ WORKDIR /app/test
 
 RUN pip3 install invoke; wget -q -O - "$@" https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
-ENV PATH=$PATH:/home/test/.local/bin
-ENV PATH=$PATH:/home/test/.poetry/bin
+ENV PATH=$PATH:/home/test/.local/bin:/home/test/.poetry/bin
 
 RUN  poetry config virtualenvs.create false; invoke installdeps --dev
 
