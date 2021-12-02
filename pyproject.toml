@@ -6,7 +6,6 @@ authors = ["Mapachana"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-unittest = "^0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"

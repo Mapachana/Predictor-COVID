@@ -44,11 +44,27 @@ También podemos comprobar la correcta sintaxis de todos los ficheros del módul
 invoke check
 ```
 
+Si no quisiéramos instalar las dependencias en nuestro ordenador personal, se puede usar un contenedor docker que puede construirse y lanzarse usando la orden:
+
+```shell
+invoke docker
+```
+
+O puede encontrarse el contenedor [aquí](https://hub.docker.com/u/mapachana)
+
+Y ejecutar los tests en este contenedor ejecutando:
+
+```shell
+docker run -t -v `pwd`:/app/test mapachana/predictor-covid
+```
+
+
 ## Documentación adicional
 
 - Se puede encontrar documentación adicional sobre los tipos de usuario [aquí](https://github.com/Mapachana/Proyecto-IV/blob/Objetivo-1/docs/objetivo1.md)
 - La justificación sobre la elección de invoke para el Objetivo 3 puede encontrarse [aquí](https://github.com/Mapachana/Proyecto-IV/blob/Objetivo-3/docs/objetivo3.md)
 - La justificación de la elección del test runner y biblioteca de aserciones puede consultarse [aquí](https://github.com/Mapachana/Predictor-COVID/blob/Objetivo-4/docs/objetivo4.md)
+- La justificación de las decisiones tomadas respecto al contenedor docker se encuentran [aquí](https://github.com/Mapachana/Predictor-COVID/blob/Objetivo-5/docs/objetivo5.md)
 - En estos enlaces podrá ver los distintos issues creados como programador en el proyecto de Mapachana:
     - HU-P1: [Elección de lenguaje de programación](https://github.com/Mapachana/Proyecto-IV/issues/6)
     - HU-P2: [Organización de las clases](https://github.com/Mapachana/Proyecto-IV/issues/7)
