@@ -9,11 +9,7 @@ jobs:
     
     steps:
       - checkout
-      - run: pip3 install invoke
-      - run: wget -q -O - "$@" https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-      - run: export PATH=$PATH:/$HOME/bin:/$HOME/.poetry/bin
-      - run: poetry config virtualenvs.create false
-      - run: invoke installdeps --dev
+      - run: pip3 install invoke;  wget -q -O - "$@" https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -; export PATH=$PATH:/$HOME/bin:/$HOME/.poetry/bin; invoke installdeps --dev
 
 # Invoke jobs via workflows
 workflows:
