@@ -20,6 +20,6 @@ workflows:
     # jobs you want to run.
     jobs:
       - build-and-test
-      matrix:
-        - paremeters:
-          version: ["3.4.4", "3.10.0" ]
+        matrix:
+          - paremeters:
+            version: ["3.4.4", "3.10.0" ]
