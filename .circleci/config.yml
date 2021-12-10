@@ -13,7 +13,7 @@ jobs:
       steps:
         - checkout
         #- run: pyenv install --list 
-        - run: pyenv install -v << parameters.version >>; pyenv global << parameters.version >>; pip install invoke;  pipx install poetry; export PATH=$PATH:/$HOME/bin:/$HOME/.poetry/bin; invoke installdeps --dev; 
+        - run: pyenv install -v << parameters.version >>; pyenv global << parameters.version >>; pip install invoke;  pip install poetry; export PATH=$PATH:/$HOME/bin:/$HOME/.poetry/bin; invoke installdeps --dev; 
 
 # Invoke jobs via workflows
 workflows:
