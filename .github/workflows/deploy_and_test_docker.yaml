@@ -29,6 +29,21 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+      
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          context: ./docker-test-p10 
+          images: mapachana/predictor-python-diez
+      
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./docker-test-p10
+          push: true
+          tags: mapachana/predictor-python-diez:latest
+          labels: ${{ steps.meta.outputs.labels }}
 
       - name: Lanzar Tests
-        run: docker run -t -v `pwd`:/app/test mapachana/predictor-covid
+        run: docker run -t -v `pwd`:/app/test mapachana/predictor-python-diez
