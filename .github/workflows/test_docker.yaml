@@ -5,10 +5,8 @@
 
 name: Publish Docker image
 
-on:
-  push:
-    branches:
-      - main
+on: push
+
 
 jobs:
   push_to_registry:
@@ -17,6 +15,9 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+
+      - name: Install Docker
+        uses: docker/setup-buildx-action@v1
       
       - name: Log in to Docker Hub
         uses: docker/login-action@v1
@@ -27,13 +28,18 @@ jobs:
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v3
+        working-directory: docker-test-p10/
         with:
-          images: mapachana/predictor-covid
+          images: mapachana/predictor-python-diez
       
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
+        working-directory: docker-test-p10/
         with:
           context: .
           push: true
-          tags: mapachana/predictor-covid:latest
+          tags: mapachana/predictor-python-diez:latest
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Lanzar Tests
+        run: docker run -t -v `pwd`:/app/test mapachana/predictor-python-diez
