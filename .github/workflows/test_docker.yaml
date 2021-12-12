@@ -5,7 +5,13 @@
 
 name: Publish Docker image
 
-on: push
+on:
+  push:
+    paths:
+      - 'docker-test-p10/**'
+      - 'poetry.lock'
+      - 'pyproject.toml'
+      - 'tasks.py'
 
 jobs:
   push_and_test:
