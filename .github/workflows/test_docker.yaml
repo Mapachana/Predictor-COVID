@@ -7,9 +7,8 @@ name: Publish Docker image
 
 on: push
 
-
 jobs:
-  push_and test:
+  push_and_test:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
