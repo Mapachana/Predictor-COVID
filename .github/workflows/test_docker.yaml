@@ -5,16 +5,10 @@
 
 name: Publish Docker image
 
-on:
-  push:
-    paths:
-      - 'docker-test-p10/**'
-      - 'poetry.lock'
-      - 'pyproject.toml'
-      - 'tasks.py'
+on: push
 
 jobs:
-  push_and_test:
+  test_python310:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
@@ -31,4 +25,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Lanzar Tests
-        run: docker run -t -v `pwd`:/app/test mapachana/predictor-covid
+        run: docker run -t -v `pwd`:/app/test mapachana/predictor-python-diez
