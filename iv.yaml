@@ -4,3 +4,4 @@ automatizar:
     fichero: tasks.py
     orden: invoke
 test: tests/test_interpretacion.py
+CI: .circleci/config.yml

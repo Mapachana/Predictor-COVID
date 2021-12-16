@@ -65,6 +65,7 @@ docker run -t -v `pwd`:/app/test mapachana/predictor-covid
 - La justificación sobre la elección de invoke para el Objetivo 3 puede encontrarse [aquí](https://github.com/Mapachana/Proyecto-IV/blob/Objetivo-3/docs/objetivo3.md)
 - La justificación de la elección del test runner y biblioteca de aserciones puede consultarse [aquí](https://github.com/Mapachana/Predictor-COVID/blob/Objetivo-4/docs/objetivo4.md)
 - La justificación de las decisiones tomadas respecto al contenedor docker se encuentran [aquí](https://github.com/Mapachana/Predictor-COVID/blob/Objetivo-5/docs/objetivo5.md)
+- La justificación de las decisiones tomadas respecto a los sistemas de integración continua se encuentra [aquí](https://github.com/Mapachana/Predictor-COVID/blob/circleci-project-setup/docs/objetivo6.md)
 - En estos enlaces podrá ver los distintos issues creados como programador en el proyecto de Mapachana:
     - HU-P1: [Elección de lenguaje de programación](https://github.com/Mapachana/Proyecto-IV/issues/6)
     - HU-P2: [Organización de las clases](https://github.com/Mapachana/Proyecto-IV/issues/7)

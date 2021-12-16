@@ -1,13 +1,16 @@
-name: Publish Docker image
+name: Publish Docker image with python 3.10
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'docker-test-p10/**'
+      - 'poetry.lock'
+      - 'pyproject.toml'
+      - 'tasks.py'
 
 jobs:
-  push_to_registry:
-    name: Push Docker image to Docker Hub
+  push_python310:
+    name: Push Docker image with python 3.10 to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -23,12 +26,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: mapachana/predictor-covid
+          context: ./docker-test-p10 
+          images: mapachana/predictor-python-diez
       
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./docker-test-p10
           push: true
-          tags: mapachana/predictor-covid:latest
+          tags: mapachana/predictor-python-diez:latest
           labels: ${{ steps.meta.outputs.labels }}
