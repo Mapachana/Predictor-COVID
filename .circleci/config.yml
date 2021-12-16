@@ -1,7 +1,7 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
+
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
+
 jobs:
   build-and-test: 
       parameters:
@@ -12,13 +12,11 @@ jobs:
     
       steps:
         - checkout
-        #- run: pyenv install --list 
         - run: pyenv install -v << parameters.version >>; pyenv global << parameters.version >>; pip install invoke; pip install cleo importlib_metadata;  wget -q -O - "$@" https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -; export PATH=$PATH:/$HOME/bin:/$HOME/.poetry/bin; poetry config virtualenvs.create false; invoke installdeps --dev; invoke test;
 
-# Invoke jobs via workflows
+
 workflows:
-  test_project: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # jobs you want to run.
+  test_project: 
     jobs:
       - build-and-test: 
           matrix:
