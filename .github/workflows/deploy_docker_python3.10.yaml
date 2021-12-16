@@ -1,4 +1,4 @@
-name: Publish Docker image
+name: Publish Docker image with python 3.10
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   push_python310:
-    name: Push Docker image to Docker Hub
+    name: Push Docker image with python 3.10 to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
