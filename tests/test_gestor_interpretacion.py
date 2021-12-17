@@ -1,6 +1,5 @@
 import sys
 import unittest
-from enum import Enum
 
 # Configuro paths
 sys.path.append('./')
