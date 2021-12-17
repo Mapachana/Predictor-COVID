@@ -66,3 +66,8 @@ class TestGestorInterpretacion(unittest.TestCase):
 
         codigo = self.obtener_codigo_log(self.interp.config.LOGFILE)
         assert codigo == "ERROR"
+
+    def test_muestra_log_interpretacion_generada(self):
+        self.interp.generar_interpretacion("Andalucía", "2020-03-10")
+        codigo = self.obtener_codigo_log(self.interp.config.LOGFILE)
+        assert codigo == "INFO"
