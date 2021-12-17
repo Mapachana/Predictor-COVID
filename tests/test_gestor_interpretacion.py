@@ -66,12 +66,3 @@ class TestGestorInterpretacion(unittest.TestCase):
 
         codigo = self.obtener_codigo_log(self.interp.config.LOGFILE)
         assert codigo == "ERROR"
-
-
-
-    
-
-        
-
-interp = gt.GestorInterpretacion("./tests/datos_prueba.csv")
-interpretacion_generada = interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
