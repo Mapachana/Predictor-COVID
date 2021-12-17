@@ -6,6 +6,6 @@ import dotenv
 sys.path.append('./')
 sys.path.append('./prediccion/')
 
-class ConfigLogging:
+class Config:
     def __init__(self):
         pass
