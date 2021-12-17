@@ -474,5 +474,5 @@ cython_debug/
 
 *.env
 log/*
-log/**
+logs/*
 *.log
