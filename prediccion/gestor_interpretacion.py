@@ -6,7 +6,7 @@ sys.path.append('./')
 sys.path.append('./prediccion/')
 
 import datos as dt
-import interpretacion as it
+from interpretacion import EstadoSituacion, Interpretacion
 import config as config
 
 class GestorInterpretacion:
@@ -19,7 +19,7 @@ class GestorInterpretacion:
         self.logger = logging.getLogger()
 
         try:
-            self.interpretacion = it.Interpretacion(fichero)
+            self.interpretacion = Interpretacion(fichero)
             self.logger.info("Se crea el objeto de interpretacion")
         except:
            self.logger.error("No se ha encontrado el fichero")
@@ -27,7 +27,10 @@ class GestorInterpretacion:
     def generar_interpretacion(self, com_auto, fecha):
         '''Metodo para genear una interpretacion. Recibe como argumentos la comunidad autonoma y fecha'''
         salida = self.interpretacion.generar_interpretacion(com_auto, fecha)
-        if salida == it.EstadoSituacion.DESCONOCIDA:
+
+        if salida == EstadoSituacion.DESCONOCIDA:
             self.logger.error("No se ha podido generar la interpretacion")
         else:
             self.logger.info("Interpretacion generada correctamente")
+
+        return salida
