@@ -1,4 +1,5 @@
 import sys
+import os
 import logging
 
 # Configuro paths
@@ -15,6 +16,16 @@ class GestorInterpretacion:
         '''Constructor de la clase GestorInterpretacion, que gestiona la clase Interpretacion'''
         # Instancio la configuracion para configurar el logger
         self.config = config.Config()
+
+        path = self.config.LOGFOLDER
+        existe = os.path.exists(path)
+        if not existe:
+            os.mkdir(path)
+        path = self.config.LOGFILE
+        existe = os.path.isfile(self.config.LOGFILE)
+        if not existe:
+            open(self.LOGFILE, 'w').close()
+
         logging.basicConfig(filename=self.config.LOGFILE, filemode='a', format=self.config.FORMAT, level=self.config.LEVEL)
         self.logger = logging.getLogger()
 
