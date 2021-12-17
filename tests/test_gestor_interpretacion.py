@@ -39,3 +39,7 @@ class TestGestorInterpretacion(unittest.TestCase):
     def test_interpretacion_ccaa_no_existe(self):
         interpretacion_generada = self.interp.interpretacion.generar_interpretacion('CCAANoExistente', '2021-01-10')
         assert interpretacion_generada is gt.EstadoSituacion.DESCONOCIDA
+
+interp = gt.GestorInterpretacion("./tests/datos_prueba.csv")
+
+interpretacion_generada = interp.generar_interpretacion('Andalucía', '2021-01-10')
