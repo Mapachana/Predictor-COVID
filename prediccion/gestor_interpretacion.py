@@ -24,10 +24,11 @@ class GestorInterpretacion:
         path = self.config.LOGFILE
         existe = os.path.isfile(self.config.LOGFILE)
         if not existe:
-            open(self.LOGFILE, 'w').close()
+            open(self.config.LOGFILE, 'w').close()
 
         logging.basicConfig(filename=self.config.LOGFILE, filemode='a', format=self.config.FORMAT, level=self.config.LEVEL)
         self.logger = logging.getLogger()
+
 
         try:
             self.interpretacion = Interpretacion(fichero)

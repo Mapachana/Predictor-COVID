@@ -1,4 +1,5 @@
 import sys
+import os
 import unittest
 
 # Configuro paths
@@ -37,5 +38,40 @@ class TestGestorInterpretacion(unittest.TestCase):
         assert interpretacion_generada == gt.EstadoSituacion.BUENA
 
     def test_interpretacion_ccaa_no_existe(self):
-        interpretacion_generada = self.interp.interpretacion.generar_interpretacion('CCAANoExistente', '2021-01-10')
+        interpretacion_generada = self.interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
         assert interpretacion_generada is gt.EstadoSituacion.DESCONOCIDA
+
+    def test_fichero_existe(self):
+        assert os.path.isfile("/tmp/IV/logs.log")
+    
+    def leer_fichero(self, fichero):
+        lineas = []
+        with open(fichero, "r") as fichero:
+            lineas = fichero.readlines()
+        return lineas
+
+    def obtener_codigo_log(self, fichero):
+        lineas_fichero = self.leer_fichero(self.interp.config.LOGFILE)
+        linea = lineas_fichero[-1]
+        linea = linea.split(" - ")
+        return  linea[0]
+
+    def test_muestra_log_fichero_no_encontrado(self):
+        gt.GestorInterpretacion("./noexisto.csv")
+        codigo = self.obtener_codigo_log(self.interp.config.LOGFILE)
+        assert codigo == "ERROR"
+    
+    def test_muestra_log_no_interpretacion(self):
+        self.interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
+
+        codigo = self.obtener_codigo_log(self.interp.config.LOGFILE)
+        assert codigo == "ERROR"
+
+
+
+    
+
+        
+
+interp = gt.GestorInterpretacion("./tests/datos_prueba.csv")
+interpretacion_generada = interp.generar_interpretacion('CCAANoExistente', '2021-01-10')
