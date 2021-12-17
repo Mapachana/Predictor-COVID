@@ -18,3 +18,4 @@ class Config:
         if not existe:
             os.mkdir(path)
         self.LEVEL = os.getenv('LEVEL')
+        
