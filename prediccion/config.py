@@ -15,7 +15,8 @@ class Config:
         self.FORMAT = os.getenv('FORMAT')
         self.LOGFILE = os.getenv('LOGFILE')
         path = os.getenv('LOGFOLDER')
-        os.mkdir(path)
+        existe = os.path.exists(path)
+        if not existe:
+            os.mkdir(path)
         self.LEVEL = os.getenv('LEVEL')
 
-c = Config()
