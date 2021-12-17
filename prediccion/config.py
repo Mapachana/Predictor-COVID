@@ -1,6 +1,5 @@
 import sys
 import os
-import logging
 from dotenv import load_dotenv
 from dotenv.main import find_dotenv
 
@@ -19,4 +18,3 @@ class Config:
         if not existe:
             os.mkdir(path)
         self.LEVEL = os.getenv('LEVEL')
-
