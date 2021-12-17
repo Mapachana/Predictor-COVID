@@ -21,7 +21,6 @@ class TestGestorInterpretacion(unittest.TestCase):
     def setUp(self):
         self.interp = gt.GestorInterpretacion("./tests/datos_prueba.csv")
 
-
     def test_tiene_datos(self):
         assert self.interp.interpretacion.contenedor_datos != []
 
